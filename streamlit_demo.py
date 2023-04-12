@@ -19,12 +19,12 @@ from tensorflow.keras.models import model_from_json
 pytesseract.pytesseract.tesseract_cmd=r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Load the model architecture from the saved JSON file
-with open(r"C:\Users\kalpa\Downloads\drive-download-20230411T124142Z-001\model_architecture.json", 'r') as f:
+with open("model_architecture.json", 'r') as f:
     model_json = f.read()
 model = model_from_json(model_json)
 
 # Load the model weights from the saved hdf5 file
-model.load_weights(r"C:\Users\kalpa\Downloads\drive-download-20230411T124142Z-001\sgdo-40000r-30e-31136t-3463v.hdf5")
+model.load_weights("sgdo-40000r-30e-31136t-3463v.hdf5")
 
 char_list = "!\"#&'()*+,-./0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
 
