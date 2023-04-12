@@ -17,6 +17,9 @@ from keras import backend as K
 from tensorflow.keras.models import model_from_json
 
 pytesseract.pytesseract.tesseract_cmd=r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+from google.colab import drive
+drive.mount('/content/gdrive')
+gdrive_path = '/content/gdrive/My Drive/'
 
 # Load the model architecture from the saved JSON file
 with open("model_architecture.json", 'r') as f:
@@ -24,7 +27,7 @@ with open("model_architecture.json", 'r') as f:
 model = model_from_json(model_json)
 
 # Load the model weights from the saved hdf5 file
-model.load_weights("sgdo-40000r-30e-31136t-3463v.hdf5")
+model.load_weights(f'{gdrive_path}sgdo-40000r-30e-31136t-3463v.hdf5')
 
 char_list = "!\"#&'()*+,-./0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 
 
