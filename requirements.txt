@@ -4,6 +4,10 @@ tensorflow
 pytesseract
 #google
 streamlit==1.1.*
+google-auth
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
 google-auth==1.30.0
 google-api-python-client==2.0.2
 
