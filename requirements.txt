@@ -2,5 +2,8 @@ numpy
 opencv-python-headless
 tensorflow
 pytesseract
-google
+#google
 streamlit==1.1.*
+google-auth==1.30.0
+google-api-python-client==2.0.2
+
